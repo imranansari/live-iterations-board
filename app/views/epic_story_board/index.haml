@@ -1,0 +1,28 @@
+!!! Strict
+%html
+  %head
+    %title test
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'coffee-test'
+  %body
+    #header
+      %h1 Sample Padrino Blog
+    #container
+      %p Recent Posts
+      %ul.bulleted
+        %li Item 1 - Lorem ipsum dolorum itsum estem
+        %li Item 2 - Lorem ipsum dolorum itsum estem
+        %li Item 3 - Lorem ipsum dolorum itsum estem
+      %p Categories
+      %ul.bulleted
+        %li Item 1 - Lorem ipsum dolorum itsum estem
+        %li Item 2 - Lorem ipsum dolorum itsum estem
+        %li Item 3 - Lorem ipsum dolorum itsum estem
+      %p Latest Comments
+      %ul.bulleted
+        %li Item 1 - Lorem ipsum dolorum itsum estem
+        %li Item 2 - Lorem ipsum dolorum itsum estem
+        %li Item 3 - Lorem ipsum dolorum itsum estem
+        %button Fancy!
+    #footer
+      Copyright &copy; 2009-2010 Padrino
