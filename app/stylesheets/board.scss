@@ -1,0 +1,252 @@
+@import "views.scss";
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: arial, sans-serif;
+  font-size: 100%;
+  margin-left: 1em;
+  margin-right: 1em;
+  background: white;
+  color: black; }
+
+h2, p {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul, li {
+  list-style: none; }
+
+
+#mainContainer {
+  height: 2000px;
+  width: 100%;
+  background-color: #f9f9f2; }
+
+
+
+/**Warp shadow**/
+
+/**
+   Tape class
+**/
+/*ul li .workItem:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 10px;
+    top: -6px;
+    left: 30%;
+    border: 1px solid #fff;
+    background: rgba(254, 254, 254, .6);
+    -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
+}*/
+
+.menuLabel {
+  display: inline-block;
+  position: relative;
+  left: -34px;
+  top: 9px;
+  width: 0px;
+  color: #f9f9f2;
+  font-size: 9px;
+  font-weight: bold; }
+
+ul li {
+  margin: 1.5em;
+  // float : left;
+  h2 {
+    font-size: 95%;
+    font-weight: bold;
+    padding-bottom: 5px;
+    cursor: text;
+    font-family: 'Ubuntu'; }
+  p {
+    font-family: 'Ubuntu';
+    font-size: 90%; }
+  div {
+    position: relative;
+    top: 5px;
+    cursor: move; }
+}
+
+
+ol {
+  text-align: center;
+  li {
+    display: inline;
+    padding-right: 1em;
+    div {
+      color: #fff; } } }
+
+.phasepanel {
+  float: left;
+  border: 1px #540223 solid;
+  width: 295px;
+  border-style: dotted;
+  height: 100%;
+    ul {
+        height:100%;
+    }
+  }
+
+/* Overlays */
+
+/* the overlayed element */
+
+.simple_overlay {
+  /* must be initially hidden */
+  display: none;
+  /* place overlay on top of other elements */
+  z-index: 10000;
+  /* styling */
+  background-color: #333;
+  width: 400px;
+  min-height: 200px;
+  border: 1px solid #666;
+  /* CSS3 styling for latest browsers */
+  -moz-box-shadow: 0 0 90px 5px #000;
+  -webkit-box-shadow: 0 0 90px #000;
+  .close {
+    background-image: url(/img/close.png);
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    cursor: pointer;
+    height: 35px;
+    width: 35px; } }
+
+/* close button positioned on upper right corner */
+
+/* styling for elements inside overlay */
+
+.details {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 11px;
+  color: #fff;
+  width: 150px;
+  h3 {
+    color: #aba;
+    font-size: 15px;
+    margin: 0 0 -10px 0; } }
+
+#header {
+  background-image: url("/images/header.png");
+    /*background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.66, rgb(26,13,3)),
+    color-stop(0.41, rgb(45,33,22))
+);*/
+  height: 78px;
+  background-size: 99.99%;
+  width: 1190px;
+  /*background-repeat: no-repeat;*/ }
+
+.phaseHeader {
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 24px;
+  display: block;
+  font-family: Monaco;
+  background-image: url("/images/arraow.png");
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+.search {
+  float: right;
+  position: relative;
+  top: 40px;
+  right: 8px;
+  width: 150px;
+  font-size: larger; }
+
+#productName {
+  float: left;
+  position: relative;
+  color: white;
+  top: 10px;
+  right: -20px;
+  font-family: 'Ubuntu', arial, serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.8); }
+
+#menuBar {
+  display: inline;
+  position: relative;
+  top: 29px;
+  left: 220px; }
+
+#projectsMenu {
+  position: relative;
+  display: inline; }
+
+#menuBar img {
+  cursor: pointer; }
+
+#portfolioView {
+  position: relative;
+  display: inline; }
+
+.expandedMenu, .expandedSubMenu {
+  display: inline; }
+
+.displayClass {
+  display: none; }
+
+.menuItemBorder {
+  display: inline;
+  padding: 18px 0 0 5px;
+  margin: 0 0 0 5px;
+  -webkit-border-radius: 5px;
+  border: 1px inset #4a2c0e; }
+
+.projectSelect {
+  width: 200px;
+  position: relative;
+  top: -10px;
+  border: 1px solid #a3b4c4;
+  border-color: #636d77 #a3b4c4 #c7d2de;
+  color: #333;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  margin: 0; }
+
+
+.editableNote {
+  padding: 0.2em;
+  width: 52%;
+  border-radius: 4px;
+  display: none;
+  background-color: #fffdde;
+  /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(247, 247, 210, 1)), to(rgba(240, 242, 155, 1)));*/ }
+
+.editableNoteHeader {
+  position: relative;
+  background-color: #faf3b3;
+  height: 25px;
+  vertical-align: text-bottom;
+  font-size: 160%;
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+.closeNote {
+  position: relative;
+  float: right;
+  top: -10px;
+  cursor: pointer; }

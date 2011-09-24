@@ -1,0 +1,108 @@
+/**Forms**/
+
+/* Labels */
+
+fieldset {
+  div {
+    label {
+      color: #666;
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 1.5em;
+      margin: 7px 0 0 0;
+      /*width: 140px;*/ }
+    input, textarea, select {
+      border: 1px solid #a3b4c4;
+      border-color: #636d77 #a3b4c4 #c7d2de;
+      color: #333;
+      display: block;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1;
+      margin: 0; }
+    input:focus, textarea:focus, select:focus {
+      border-color: #636d77; }
+    input {
+      padding: 6px 5px;
+      width: 288px;
+      border-radius: 3px;
+      font-size: larger; }
+    select {
+      padding: 0 0 0 3px;
+      width: 291px;
+      border-radius: 3px;
+      font-size: larger; }
+    textarea {
+      height: 89px;
+      padding: 6px 5px;
+      width: 288px; }
+    input[type=file] {
+      background: none;
+      border: inherit;
+      padding: 0; }
+    ul {
+      margin: 5px 0 0 0;
+      li {
+        margin: 0 0 5px;
+        padding: 0;
+        label {
+          display: inline;
+          float: none;
+          font-size: 1em;
+          font-weight: normal;
+          margin: 0;
+          padding: 0; }
+        input {
+          background: none;
+          border: none;
+          display: inline;
+          margin: 0 5px 0 0;
+          padding: 0;
+          width: auto; } } }
+    &.controls {
+      margin: 25px 0 0;
+      padding: 0; } }
+  margin: 3px;
+  border: 0px; }
+
+/* Input defaults */
+
+/* Focus */
+
+/* Text inputs */
+
+/* Select menus */
+
+/* Textareas */
+
+/* File Upload */
+
+/* Radio buttons + checkboxes */
+
+.formControls {
+  margin: 20px 10px 10px;
+  padding: 0;
+  float: right; }
+
+@import "blueprint";
+.formContainer {
+
+$blueprint_grid_columns: 4;
+$blueprint_grid_width: 150px;
+
+  .col1 {
+    @include column(2);
+  }
+  .col2 {
+    @include column(2);
+    }
+
+}
+
+.save {
+    @include fancy-button(#57b42c, 15px);
+};
+
+.clear {
+    @include fancy-button(yellow, 15px);
+};

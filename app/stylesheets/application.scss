@@ -14,8 +14,6 @@
 
 @import "fancy-buttons";
 
-@import "board.scss";
-@import "forms.scss";
 
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
@@ -39,26 +37,8 @@ form.bp {
   @include blueprint-form;
 }
 
-.two-col {
-  @include container;
-  background-color: #cccccc;
-  #header, #footer {
-    @include column(24); }
-  #sidebar {
-    @include column(3); }
-  #content {
-    @include column(21, true); } }
-
 
 #myLogo {
     @include opacity(0.5);
     color: red;
 }
-
-.save {
-    @include fancy-button(#57b42c, 15px);
-};
-
-.clear {
-    @include fancy-button(yellow, 15px);
-};
