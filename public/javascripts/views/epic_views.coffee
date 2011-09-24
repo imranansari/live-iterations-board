@@ -27,16 +27,18 @@ class window.UpdatingEpicView extends window.EpicView
 
 class window.EpicEditView extends window.UpdatingEpicView
   events: 
-    "submit form": "onSubmit"
     "click #deleteEpicStory": "destroy"
     "click #saveEpicStory": "update"
-  
+    "click .closeNote": "closeDialog"
+
+  ###
   initialize: ->
     _.bindAll this, "contentChanged"
     @inputContent = @$("input.content")
     console.log @inputContent.valueOf()
     @
-  
+  ###
+
   render: ->
     source = $("#editableEpicStoryDlg").html()
     template = Handlebars.compile(source)
@@ -56,8 +58,12 @@ class window.EpicEditView extends window.UpdatingEpicView
     console.log formData
     console.log @model.toJSON()
     console.log @model.id
-    epicModels.get(@model.id).set(formData).save()
-    @
+    window.epicController.updateEpic(@model.id, formData)
+    false
+
+  closeDialog: ->
+    $("#lightBoxContent").trigger('close');
+
 
 class window.NewEpicView extends Backbone.View
   events: "submit form": "onSubmit"

@@ -17,6 +17,7 @@ class EpicController extends Backbone.Router
 
   updateEpic: (id, values) ->
     @epicModels.get(id).set(values).save()
+    false
 
 
   displayEpics: ->
@@ -76,7 +77,7 @@ class EpicController extends Backbone.Router
 
   editEpic: (editEpicModel) ->
     console.log editEpicModel.toJSON().phase
-    epicEditView = new EpicEditView(model: editEpicModel)
+    epicEditView = new window.EpicEditView(model: editEpicModel)
     $("#lightBoxContent").html(epicEditView.render().el)
     $("#lightBoxContent").lightbox_me
       closeClick: false
@@ -86,7 +87,7 @@ class EpicController extends Backbone.Router
       overlayDisappearSpeed: 0
 
   newEpic: ->
-    newEpicView = new NewEpicView()
+    newEpicView = new window.NewEpicView()
     $("#lightBoxContent").html newEpicView.render().el
     $("#lightBoxContent").lightbox_me
       closeClick: false
