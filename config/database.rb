@@ -3,8 +3,16 @@
 host = 'localhost'
 port = Mongo::Connection::DEFAULT_PORT
 
+=begin
 database_name = case Padrino.env
   when :development then 'live_iterations_board_development'
+  when :production  then 'live_iterations_board_production'
+  when :test        then 'live_iterations_board_test'
+end
+=end
+
+database_name = case Padrino.env
+  when :development then 'demo'
   when :production  then 'live_iterations_board_production'
   when :test        then 'live_iterations_board_test'
 end

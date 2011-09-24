@@ -8,6 +8,8 @@ class LiveIterationsBoard < Padrino::Application
 
   enable :sessions
 
+  set :slim, :auto_escape => false, :pretty => true
+
   ##
   # Caching support
   #

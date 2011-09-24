@@ -1,0 +1,15 @@
+#epicItemView style="display:none;"
+  .epicStoryContainer style="height:205px"
+    .epicStory
+      img.editEpicNote refId="{{_id}}" src="/images/pencil_16.png"
+        h2 style="display:inline;left:-25px;position:relative;" {{storyName}}
+        p {{storyDesc}}
+        .workItemFooter
+          .assigned {{assigned}}
+          .comments Comments
+          div
+            input style="margin-right:2px;display:inline;" type="checkbox"
+            | Done
+    .storyCount {{storyCount}}
+    .epicStack1
+    .epicStack2

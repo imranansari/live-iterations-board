@@ -10,6 +10,13 @@
 // Import the non-default scaffolding module.
 @import "blueprint/scaffolding";
 
+@import "compass/css3";
+
+@import "fancy-buttons";
+
+@import "board.scss";
+@import "forms.scss";
+
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -42,16 +49,16 @@ form.bp {
   #content {
     @include column(21, true); } }
 
-@import "compass/css3";
-
-@import "fancy-buttons";
 
 #myLogo {
     @include opacity(0.5);
     color: red;
-    }
+}
 
+.save {
+    @include fancy-button(#57b42c, 15px);
+};
 
-button {
-    @include fancy-button(#3b3b3b, 15px);
+.clear {
+    @include fancy-button(yellow, 15px);
 };

@@ -1,0 +1,27 @@
+doctype Strict
+html
+  head
+    title test
+    == stylesheet_link_tag 'application'
+    == javascript_include_tag '/javascripts/lib/jquery-1.4.4.js'
+    == javascript_include_tag '/javascripts/lib/jquery-ui.js'
+    == javascript_include_tag '/javascripts/lib/jquery.lightbox_me.js'
+    == javascript_include_tag '/javascripts/lib/jquery.notify.js'
+    == javascript_include_tag '/javascripts/lib/json2.js'
+    == javascript_include_tag '/javascripts/lib/jquery.json-1.3.min.js'
+    == javascript_include_tag '/javascripts/lib/underscore.js'
+    == javascript_include_tag '/javascripts/lib/backbone.js'
+    == javascript_include_tag '/javascripts/lib/handlebars.1.0.0.beta.3.js'
+    == javascript_include_tag '/javascripts/lib/updating_collection.js'
+    == javascript_include_tag '/javascripts/lib/updating_dashboard_collection.js'
+    == javascript_include_tag '/javascripts/util.js'
+    == javascript_include_tag '/javascripts/models/models.js'
+    == javascript_include_tag '/javascripts/views/epic_views.js'
+    == javascript_include_tag '/javascripts/controllers/epic_controller.js'
+
+  body
+    == render 'epic_board/jstemplates/board'
+    == render 'epic_board/jstemplates/epicItemView'
+    == render 'epic_board/jstemplates/editableEpicStoryDlg'
+    #mainContainer
+    #lightBoxContent.editableNote

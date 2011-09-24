@@ -12,7 +12,7 @@ gem 'rack-coffee', :require => "rack/coffee"
 gem 'coffee-script'
 gem 'compass'
 gem 'fancy-buttons'
-gem 'haml'
+gem 'slim'
 gem 'mongoid'
 gem 'bson_ext', :require => "mongo"
 

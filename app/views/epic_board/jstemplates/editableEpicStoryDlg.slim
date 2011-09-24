@@ -1,0 +1,45 @@
+#editableEpicStoryDlg style="display:none;"
+  .editableNoteHeader
+    span.closeNote
+      img src="/images/close_16.png"
+    | {{storyName}}
+  form action="#" method="get" id="editableEpicStoryForm_{{_id}}"
+    fieldset
+      .formContainer
+        .col1
+          div
+            label for="storyName"
+            input#storyName name="storyName" type="text" value="{{ storyName}}"
+          div
+            label for="storyType"
+            select#storyType name="storyType"
+              option test3
+              option test4
+          div
+            label for="storyDescription"
+            textarea#storyDesc name="storyDesc" cols="20" rows="2" {{storyDesc}}
+          div
+            label for="storyDescription"
+            textarea#acceptanceTest name="acceptanceTest" cols="20" rows="2" {{acceptanceTest}}
+        .col2
+          div
+            label for="dueDate"
+            input#dueDate type="date"
+          div
+            label for="assignedTo"
+            select#assignedTo
+              option test1
+              option test2
+          div
+            label for="estimate"
+            input#estimate name="estimate" type="text"
+          div
+            label for="pct_complete"
+            input#pct_complete name="pct_complete" type="text"
+          div
+            label for="storyTags"
+            input#storyTags name="tags" type="password"
+    /! Controls
+    .formControls
+      button#saveEpicStory class="save" Save
+      button#deleteEpicStory class="clear" Delete
